@@ -1,0 +1,101 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<UserSecretsId>d6e477ac-5df1-496b-a946-f282295d852f</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..</DockerfileContext>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Infraestructure\**" />
+	  <Content Remove="Infraestructure\**" />
+	  <EmbeddedResource Remove="Infraestructure\**" />
+	  <None Remove="Infraestructure\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.System" Version="6.0.5" />
+		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+		<PackageReference Include="AspNetCore.HealthChecks.Uris" Version="6.0.3" />
+		<PackageReference Include="DocumentoEquivalente.Modelo" Version="1.0.5" />
+		<PackageReference Include="FluentValidation" Version="11.4.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
+		<PackageReference Include="TFHKA.DE.DocumentBuildCO" Version="1.0.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="XSD\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="XSD\UBL2.1\common\CCTS_CCT_SchemaModule-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-CommonAggregateComponents-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-CommonBasicComponents-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-CommonExtensionComponents-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-CommonSignatureComponents-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-CoreComponentParameters-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-ExtensionContentDataType-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-QualifiedDataTypes-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-SignatureAggregateComponents-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-SignatureBasicComponents-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-UnqualifiedDataTypes-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-XAdESv132-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-XAdESv141-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\common\UBL-xmldsig-core-schema-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\maindoc\DIAN_UBL_Structures.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\maindoc\UBL-ApplicationResponse-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\maindoc\UBL-AttachedDocument-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\maindoc\UBL-CreditNote-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\maindoc\UBL-DebitNote-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="XSD\UBL2.1\maindoc\UBL-Invoice-2.1.xsd">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>
